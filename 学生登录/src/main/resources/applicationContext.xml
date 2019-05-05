@@ -40,20 +40,20 @@
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
 	<!--=========================== Action的配置 =============================-->
-	<!-- 管理员action -->
-	<bean id="adminUserAction" class="edu.nenu.onlineExam.adminuser.action.AdminUserAction" scope="prototype">
-		<property name="adminUserService" ref="adminUserService"></property>
+	<!-- 学生action -->
+	<bean id="adminUserAction" class="edu.nenu.onlineExam.studentuser.action.StudentUserAction" scope="prototype">
+		<property name="studentUserService" ref="studentUserService"></property>
 	</bean>
 	 
 	<!--=========================== Service的配置  ============================-->
-	<!-- 管理员service -->
-	<bean id="adminUserService" class="edu.nenu.onlineExam.adminuser.service.StudentUserService">
-		<property name="adminUserDao" ref="adminUserDao"></property>
+	<!-- 学生service -->
+	<bean id="adminUserService" class="edu.nenu.onlineExam.studentuser.service.StudentUserService">
+		<property name="studentUserDao" ref="studentUserDao"></property>
 	</bean>
 	 
 	<!--============================ Dao的配置  ===================================-->
-	<!-- 管理员dao -->
-	<bean id="adminUserDao" class="edu.nenu.onlineExam.adminuser.dao.StudentUserDao">
+	<!-- 学生dao -->
+	<bean id="adminUserDao" class="edu.nenu.onlineExam.studentuser.dao.StudentUserDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>
