@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>系统管理员登录</title>
+    <title>系统管理员登录/title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -80,45 +80,45 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</style>
 	<script type="text/javascript">
 		
-		// function checkId(){
-		// 	var uid = document.getElementById("uid").value;
-		// 	var idspan = document.getElementById("idspan");
-		// 	var reg = /^[0-9]{2,11}$/i;
-		//
-		// 	var flag ;
-		// 	if(uid == ""){
-		// 		idspan.innerHTML = "* 管理员编号不能为空".fontcolor("red").fontsize("2px");
-		// 		flag = false;
-		// 	}else if(!reg.test(uid)){
-		// 		idspan.innerHTML = "* 管理员编号只能是数字".fontcolor("red").fontsize("2px");
-		// 		flag = false;
-		// 	}else{
-		// 		idspan.innerHTML = "";
-		// 		flag = true;
-		// 	}
-		// 	return flag;
-		//
-		// }
-		// function checkPW(){
-		// 	var password = document.getElementById("password").value;
-		// 	var pwspan = document.getElementById("pwspan");
-		// 	var flag = false;
-		// 	if(password == ""){
-		// 		pwspan.innerHTML = "* 密码不能为空".fontcolor("red").fontsize("2px");
-		// 		flag = false;
-		// 	}else{
-		// 		pwspan.innerHTML = "";
-		// 		flag = true;
-		// 	}
-		// 	return flag;
-		// }
-		// function checkForm(){
-		// 	if(checkId()  checkPW()){
-		// 		return true;
-		// 	}else{
-		// 		return false;
-		// 	}
-		// }
+		function checkId(){
+			var uid = document.getElementById("uid").value;
+			var idspan = document.getElementById("idspan");
+			var reg = /^[0-9]{2,11}$/i;
+		
+			var flag ;
+			if(uid == ""){
+				idspan.innerHTML = "* 管理员编号不能为空".fontcolor("red").fontsize("2px");
+				flag = false;
+			}else if(!reg.test(uid)){
+				idspan.innerHTML = "* 管理员编号只能是数字".fontcolor("red").fontsize("2px");
+				flag = false;
+			}else{
+				idspan.innerHTML = "";
+				flag = true;
+			}
+			return flag;
+			
+		}
+		function checkPW(){
+			var password = document.getElementById("password").value;
+			var pwspan = document.getElementById("pwspan");
+			var flag = false;
+			if(password == ""){
+				pwspan.innerHTML = "* 密码不能为空".fontcolor("red").fontsize("2px");
+				flag = false;
+			}else{
+				pwspan.innerHTML = "";
+				flag = true;
+			}
+			return flag;
+		}
+		function checkForm(){
+			if(checkId() && checkPW()){
+				return true;
+			}else{
+				return false;
+			}
+		}
 	</script>
 </head>
 
@@ -163,7 +163,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </table>  
         </form>
       </center>
-      <%--<span id="errspan" style="test"><s:actionerror/></span>--%>
+      <span id="errspan" style="test"><s:actionerror/></span>
     </div>
   </div>
 </body>

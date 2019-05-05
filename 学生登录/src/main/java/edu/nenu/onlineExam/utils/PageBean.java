@@ -1,17 +1,12 @@
 package edu.nenu.onlineExam.utils;
 
 import java.util.List;
-
-/**
- * 分页类的封装
- *
- */
 public class PageBean<T> {
-	private int page;	//表示当前页数
-	private int totalCount;	//总记录数
-	private int totalPage;	//总页数
-	private int limit;	//每页显示的记录数
-	private List<T> list; //每页显示数据的集合
+	private int page;	//锟斤拷示锟斤拷前页锟斤拷
+	private int totalCount;	//锟杰硷拷录锟斤拷
+	private int totalPage;	//锟斤拷页锟斤拷
+	private int limit;	//每页锟斤拷示锟侥硷拷录锟斤拷
+	private List<T> list; //每页锟斤拷示锟斤拷锟捷的硷拷锟斤拷
 	
 	public int getPage() {
 		return page;
