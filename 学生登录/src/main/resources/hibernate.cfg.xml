@@ -12,6 +12,6 @@
 		
 		
 		<!-- 把映射文件放到核心配置文件中 -->
-		<mapping resource="edu/nenu/onlineExam/adminuser/entity/AdminUser.hbm.xml"/>
+		<mapping resource="edu/nenu/onlineExam/studentuser/entity/StudentUser.hbm.xml"/>
  	</session-factory>
 </hibernate-configuration>
